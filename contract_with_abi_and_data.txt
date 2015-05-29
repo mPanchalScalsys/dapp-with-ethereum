@@ -1,0 +1,30 @@
+/** SAMPLE CONTRACT */
+contract MyContract {
+
+    event Created(bytes32 indexed identifier);
+
+    function MyContract(bytes32 identifier) {
+        Created(identifier);
+    }
+}
+
+/** ABI CODE */
+[
+   {
+      "anonymous" : false,
+      "inputs" : [
+         {
+            "indexed" : true,
+            "name" : "identifier",
+            "type" : "bytes32"
+         }
+      ],
+      "name" : "Created",
+      "type" : "event"
+   }
+]
+
+
+
+/** COMPILED CODE*/
+6020603f600439600451807f102d25c49d33fcdb8976a3f2744e0785c98d9e43b88364859e6aec4ae82eff5c60006040a250600180603e6000396000f30000
